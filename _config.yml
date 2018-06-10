@@ -17,9 +17,9 @@ permalink: "/blog/articles/:year-:month-:day-:title.html"
 path: # These paths are to the main pages. Some helpers refer to these paths; change them here if needed.
   atom_feed: /blog/feeds/atom.xml
   rss_feed: /blog/feeds/rss.xml
-  blog_archive: /blog/archive.html
-  blog_categories: /blog/categories.html
-  blog_tags: /blog/tags.html
+  blog_archive: /blog/archive/
+  blog_categories: /blog/categories/
+  blog_tags: /blog/tags/
 plugins:
   - jekyll-archives
   - jekyll-contentblocks
