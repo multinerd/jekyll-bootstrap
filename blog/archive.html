@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: blog
 title : Archive
 header : Post Archive
 group: navigation
@@ -7,5 +7,115 @@ permalink: /blog/archive/
 ---
 {% include JB/setup %}
 
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+
+<div class="row">
+
+	<!-- First column -->
+	<div class="col-4">
+
+		<!-- Navigation -->
+		<div class="list-group" id="list-tab" role="tablist">
+			<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+			<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+			<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+			<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+		</div>
+		<!-- Navigation -->
+
+	</div>
+	<!-- First column -->
+
+	<!-- Second column -->
+	<div class="col-8">
+
+		<!-- Content -->
+		<div class="tab-content" id="nav-tabContent">
+			<div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
+			<div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+			<div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+			<div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+		</div>
+		<!-- Content -->
+
+	</div>
+	<!-- Second column -->
+
+</div>
+
+
+
+
+
+<!--Archive-->
+<section class="archive mb-5">
+
+	<!--/ Card-->
+	<div class="card card-body pb-0">
+		<div class="single-post">
+
+			<p class="font-weight-bold dark-grey-text text-center spacing grey lighten-4 py-2 mb-4">
+				<strong>ARCHIVE</strong>
+			</p>
+
+			<!--Grid row-->
+			<div class="row mb-4">
+
+				<!--Grid column-->
+				<div class="col-md-12">
+
+					<!--List-->
+					{% assign posts_collate = site.posts %}
+					{% include JB/posts_collate %}
+
+					<ul class="list-unstyled">
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">August 2016</a>
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">July 2016</a>
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">June 2016</a>
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">May 2016</a>
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">April 2016</a>
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">March 2016</a>
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								<a href="#!" class="dark-grey-text">Febuary 2016</a>
+							</p>
+						</li>
+					</ul>
+					<!--List-->
+
+				</div>
+				<!--Grid column-->
+
+			</div>
+			<!--Grid row-->
+
+		</div>
+
+	</div>
+	<!--/ Card-->
+
+</section>
+<!--Archive-->
