@@ -3,19 +3,19 @@
 #  icon: fa-user
 
 - title: Blog
-  link: /blog
+  link: /blog/
   #icon: fa-terminal
 
 - title: Categories
-  link: /blog/categories
+  link: /blog/categories/
   #icon: fa-terminal
 
 - title: Tags
-  link: /blog/tags
+  link: /blog/tags/
   #icon: fa-terminal
 
 - title: Archives
-  link: /blog/archive
+  link: /blog/archive/
   #icon: fa-terminal
 
 - title: Cydia Repository
@@ -24,4 +24,4 @@
 
 - title: Sitemap
 #  icon: fa-ellipsis-v
-  link: /pages/
+  link: /sitemap/
