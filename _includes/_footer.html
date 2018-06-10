@@ -1,8 +1,8 @@
-	{% if site.data.socialMedia %}
+	{% if site.data.myInfo.socialMedia %}
 	<!--Social Buttons -->
 	<div class="footer-socials text-center mb-3">
 		<div class="container-fluid wow fadeInDown">
-			{% for social in site.data.socialMedia %}
+			{% for social in site.data.myInfo.socialMedia %}
 			<a id="footer-social-{{ social.title | slugify }}" class="btn-floating" href="{{ social.url }}" target="_blank"><i class="fab {{ social.icon }}"></i></a>
 			{% endfor %}
 		</div>

@@ -1,13 +1,5 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
-
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
+############################################################
+# Site configurations
 title : Jekyll Bootstrap
 tagline: Site Tagline
 author :
@@ -17,27 +9,60 @@ author :
 #  twitter : username
 #  feedburner : feedname
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://username.github.io
 
-plugins: ["jekyll-sitemap"]
-
-
-# These paths are to the main pages.
-# Some helpers refer to these paths; change them here if needed.
-path:
+url: "http://multinerd.github.io"
+baseurl: ""
+production_url: "http://multinerd.github.io" # Ideally, this would be your site.url + site.base_url
+permalink: "/blog/articles/:year-:month-:day-:title.html"
+path: # These paths are to the main pages. Some helpers refer to these paths; change them here if needed.
   atom_feed: /blog/feeds/atom.xml
   rss_feed: /blog/feeds/rss.xml
   blog_archive: /blog/archive.html
   blog_categories: /blog/categories.html
   blog_tags: /blog/tags.html
+plugins:
+  - jekyll-archives
+  - jekyll-contentblocks
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+include:
+  - _pages
+exclude:
+  - .jekyll-metadata
+  - notes.md
+  - serve.command
+  - Gemfile
+  - Gemfile.lock
+  - /script
+  - Rakefile
+  - vendor
+
+############################################################
+# Pagination Settings
+pagination:
+  enabled: true
+  debug: false
+  title: ':title - Page :num'
+  permalink: '/index:num.html'
+  per_page: 2   # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  limit: 0      # Limit how many paginated pages to create (default: 0, means all)
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 10
+    after: 10
+#  collection: 'posts'  # The default document collection to paginate if nothing is specified ('posts' is default)
+#  category: 'posts'    # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+#  tag: ''              # Optional, the default tag to use, omit to disable
+
+
+
+
+
+
+
+highlighter: pygments
+
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
