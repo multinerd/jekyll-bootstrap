@@ -11,11 +11,11 @@ highlighter: pygments
 title : Jekyll Bootstrap
 tagline: Site Tagline
 author :
-  name : Name Lastname
+  name : Michael Hedaitulla
   email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  github : multinerd
+#  twitter : username
+#  feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -27,7 +27,11 @@ author :
 #
 production_url : http://username.github.io
 
-gems: ["jekyll-sitemap"]
+plugins: ["jekyll-sitemap"]
+
+
+# These paths are to the main pages.
+# Some helpers refer to these paths; change them here if needed.
 path:
   atom_feed: /blog/feeds/atom.xml
   rss_feed: /blog/feeds/rss.xml
