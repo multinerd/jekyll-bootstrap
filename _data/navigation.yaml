@@ -1,0 +1,27 @@
+- title: Home
+  link: /
+#  icon: fa-user
+
+- title: Blog
+  link: /blog
+  #icon: fa-terminal
+
+- title: Categories
+  link: /blog/categories
+  #icon: fa-terminal
+
+- title: Tags
+  link: /blog/tags
+  #icon: fa-terminal
+
+- title: Archives
+  link: /blog/archive
+  #icon: fa-terminal
+
+- title: Cydia Repository
+  link: /repository/
+#  icon: fa-terminal
+
+- title: Sitemap
+#  icon: fa-ellipsis-v
+  link: /pages/
