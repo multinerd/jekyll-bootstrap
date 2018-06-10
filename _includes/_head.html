@@ -29,8 +29,8 @@
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 		<!-- feeds -->
-		<link rel="alternate" href="{{ '/atom.xml' | absolute_url }}" type="application/atom+xml" title="{{ site.author.name }} Atom Feed" />
-		<link rel="alternate" href="{{ '/rss.xml' | absolute_url }}" type="application/rss+xml" title="{{ site.author.name }} RSS Feed" />
+		<link rel="alternate" href="{{ site.path.atom_feed | absolute_url }}" type="application/atom+xml" title="{{ site.author.name }} Atom Feed" />
+		<link rel="alternate" href="{{ site.path.rss_feed | absolute_url }}" type="application/rss+xml" title="{{ site.author.name }} RSS Feed" />
 
 
 
