@@ -4,7 +4,7 @@ title:  "C# BlogPost"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(29).jpg
 date:   2011-05-20
 category: 'C#'
-categories: C# Software Desktop
+categories: [C#, Software Developement]
 tags: [async, repository]
 published: true
 ---
