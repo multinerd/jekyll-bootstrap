@@ -3,28 +3,25 @@
 <head>
 	{% include _head.html %}
 </head>
-<body>
-	<main id="wrap">
-		<header>
-			<!--navbar-->
-{% include _navigation.html %}
-		</header>
+<body id="topOfPage" class="grey lighten-4" >
 
-		<div class="container">
-			<!--content-->
-{{ content }}
-		</div>
+	<!--header-->
+	<header></header>
+
+	<!--navbar-->
+	<nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
+		{% include _navigation.html %}
+	</nav>
+
+	<!--mainContent-->
+	<main>
+		{{ content }}
 	</main>
 
-	<div id="footer">
-		<div class="container">
-			<p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} with help from
-				<a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-			   and
-				<a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
-			</p>
-		</div>
-	</div>
+	<!--footer-->
+	<footer id="footer" class="page-footer elegant-color-dark">
+		{% include _footer.html %}
+	</footer>
 
 {% include JB/analytics %}
 {% include _scripts.html %}

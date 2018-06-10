@@ -1,0 +1,17 @@
+	{% if site.data.socialMedia %}
+	<!--Social Buttons -->
+	<div class="footer-socials text-center mb-3">
+		<div class="container-fluid wow fadeInDown">
+			{% for social in site.data.socialMedia %}
+			<a id="footer-social-{{ social.title | slugify }}" class="btn-floating" href="{{ social.url }}" target="_blank"><i class="fab {{ social.icon }}"></i></a>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+
+	<!--Copyright-->
+	<div class="footer-copyright text-center py-3 wow fadeInDown">
+		© 2018 Copyright: <a href="https://multinerd.github.io"> multinerd.io </a> |
+		<a href="https://multinerd.github.io"> multinerd.github.io </a>
+		<!--<br><span class="text-muted grey-text"> echo 'contact at multinerd dot io' |sed 's/ at /@/' | sed 's/ dot /./'</span>-->
+	</div>
