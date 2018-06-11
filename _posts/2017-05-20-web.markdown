@@ -1,13 +1,10 @@
 ---
 layout: post
-
 title:  "Web Blogpost"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg
 date:   2017-05-20
-category: Web
-categories: Web HTML CSS Mobile Desktop
-tags: html css javascript 
-temp: ['html', 'css', 'javascript']
+categories: [C-Jekyll, C-Test, C-HTML, C-CSS, C-Markdown, C-Liquid]
+tags: [html, css, javascript]
 published: true
 ---
 

@@ -1,12 +1,10 @@
 ---
 layout: post
-
 title:  "Welcome to Jekyll4!"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(146).jpg
 date:   2018-05-20
-category: apple
-categories: jekyll update html css
-tags: ['tag11', 'tag21']
+categories: [C-Jekyll, C-Test, C-HTML, C-CSS, C-Markdown, C-Liquid]
+tags: [tag11, tag2]
 published: true
 ---
 
@@ -30,3 +28,4 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help
+

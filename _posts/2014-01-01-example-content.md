@@ -3,8 +3,7 @@ layout: post
 title: Example content
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(28).jpg
 date:   2014-01-01
-category: Swift
-categories: Swift Software Mobile iPhone
+categories: [C-Jekyll, C-Test, C-HTML, C-CSS, C-Markdown, C-Liquid]
 tags: ['mobile', 'swift']
 published: true
 ---

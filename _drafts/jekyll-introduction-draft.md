@@ -1,8 +1,11 @@
 ---
 layout: post
-category : lessons
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+title: Example content
+photo: http://mdbootstrap.com/img/Photos/Slides/img%20(28).jpg
+date:   2014-01-01
+categories: [C-lessons]
+tags: [intro, beginner, jekyll, tutorial]
+published: false
 ---
 {% include JB/setup %}
 
