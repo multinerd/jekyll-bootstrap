@@ -3,7 +3,7 @@ layout: post
 title:  "C# BlogPost"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(29).jpg
 date:   2017-05-20
-categories: [C-c#, C-software development]
+categories: [c#, software development]
 tags: [software, c#, async, repository]
 published: true
 ---

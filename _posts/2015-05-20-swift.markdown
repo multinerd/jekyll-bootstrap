@@ -3,7 +3,7 @@ layout: post
 title:  "Swift Blogpost"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(28).jpg
 date:   2014-02-20
-categories: [C-swift, C-software development, C-mobile]
+categories: [swift, software development, mobile]
 tags: [software, swift]
 published: true
 ---

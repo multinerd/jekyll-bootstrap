@@ -3,7 +3,7 @@ layout: post
 title: Introducing Lanyon
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(28).jpg
 date:   2014-01-02
-categories: [C-Jekyll, C-Test, C-HTML, C-CSS, C-Markdown, C-Liquid]
+categories: [Jekyll, Test, HTML, CSS, Markdown, Liquid]
 tags: ['mobile', 'swift']
 published: true
 ---

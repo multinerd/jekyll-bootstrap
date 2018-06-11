@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll4!"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(146).jpg
 date:   2018-05-20
-categories: [C-Jekyll, C-Test, C-HTML, C-CSS, C-Markdown, C-Liquid]
+categories: [Jekyll, Test, HTML, CSS, Markdown, Liquid]
 tags: [tag11, tag2]
 published: true
 ---

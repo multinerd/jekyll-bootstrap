@@ -3,7 +3,7 @@ layout: post
 title:  "Web Blogpost"
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(144).jpg
 date:   2017-05-20
-categories: [C-Jekyll, C-Test, C-HTML, C-CSS, C-Markdown, C-Liquid]
+categories: [Jekyll, Test, HTML, CSS, Markdown, Liquid]
 tags: [html, css, javascript]
 published: true
 ---

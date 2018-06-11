@@ -3,7 +3,7 @@ layout: post
 title: Example content
 photo: http://mdbootstrap.com/img/Photos/Slides/img%20(28).jpg
 date:   2014-01-01
-categories: [C-lessons]
+categories: [lessons]
 tags: [intro, beginner, jekyll, tutorial]
 published: false
 ---
