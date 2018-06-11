@@ -18,20 +18,20 @@ Usage:
 -->{% endcomment %}
 
 {% if site.JB.tags_list.provider == "custom" %}
-  {% include custom/tags_list %}
+    {% include custom/tags_list %}
 {% else %}
-  {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %}
-        <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag | slugify }}-ref">
-            {{ tag }} <span class="badge badge-pill yellow">{{ site.tags[tag].size }}</span>
-        </a>
-    {% endfor %}
-  {% else %}
-    {% for tag in tags_list %}
-        <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag[0] | slugify }}-ref">
-            {{ tag[0] }} <span class="badge badge-pill pink ">{{ tag[1].size }}</span>
-        </a>
-    {% endfor %}
-  {% endif %}
+    {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+            <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag | slugify }}-ref">
+                {{ tag }} <span class="badge badge-pill yellow">{{ site.tags[tag].size }}</span>
+            </a>
+        {% endfor %}
+    {% else %}
+        {% for tag in tags_list %}
+            <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag[0] | slugify }}-ref">
+                {{ tag[0] }} <span class="badge badge-pill pink">{{ tag[1].size }}</span>
+            </a>
+        {% endfor %}
+    {% endif %}
 {% endif %}
 {% assign tags_list = nil %}

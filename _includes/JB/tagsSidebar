@@ -1,0 +1,43 @@
+{% comment %}<!--
+The tags_list include is a listing helper for tags.
+Usage:
+  1) assign the 'tags_list' variable to a valid array of tags.
+  2) include JB/tags_list
+  example:
+    <ul>
+  	  {% assign tags_list = site.tags %}
+  	  {% include JB/tags_list %}
+  	</ul>
+
+  Notes:
+    Tags can be either a Hash of tag objects (hashes) or an Array of tag-names (strings).
+    The encapsulating 'if' statement checks whether tags_list is a Hash or Array.
+    site.tags is a Hash while page.tags is an array.
+    
+  This helper can be seen in use at: ../_layouts/default.html
+-->{% endcomment %}
+
+{% if site.JB.tags_list.provider == "custom" %}
+    {% include custom/tags_list %}
+{% else %}
+    {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a class="" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag | slugify }}-ref">
+                    <p class="mb-0">{{ tag[0] | join: "/" | titlecase }}</p>
+                </a>
+                <span class="badge badge-pill yellow">{{ site.tags[tag].size }}</span>
+            </li>
+        {% endfor %}
+    {% else %}
+        {% for tag in tags_list %}
+            <li class="list-group-item d-flex justify-content-between align-items-center py-1">
+                <a class="dark-grey-text" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag[0] | slugify }}-ref">
+                    <small class="mb-0">{{ tag[0] | join: "/" | titlecase }}</small>
+                </a>
+                <span class="badge badge-pill pink">{{ tag[1].size }}</span>
+            </li>
+        {% endfor %}
+    {% endif %}
+{% endif %}
+{% assign tags_list = nil %}
