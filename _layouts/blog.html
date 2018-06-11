@@ -98,8 +98,9 @@ layout: default
               <!--Grid row-->
               <div class="row mb-4">
                 <div class="col-12">
-                  <a href="/feed.xml" class="btn btn-sm btn-elegant">via RSS</a>
-                  <a href="/blog/api" class="btn btn-sm btn-elegant">via JSON</a>
+	                <a href="{{ site.path.rss_feed | prepend: absolute_url }}" class="btn btn-sm btn-elegant">via RSS</a>
+	                <a href="{{ site.path.atom_feed | prepend: absolute_url }}" class="btn btn-sm btn-elegant">via ATOM</a>
+                    <a href="{{ site.path.json_feed | prepend: absolute_url }}" class="btn btn-sm btn-elegant">via JSON</a>
                 </div>
 
                 <!--/ Excerpt-->
