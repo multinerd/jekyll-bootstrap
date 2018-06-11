@@ -377,45 +377,13 @@ layout: default
                 <!--Grid column-->
                 <div class="col-md-12 text-center">
 
-                  <!--List-->
-                  <ul class="list-unstyled">
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">August 2016</a>
-                      </p>
-                    </li>
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">July 2016</a>
-                      </p>
-                    </li>
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">June 2016</a>
-                      </p>
-                    </li>
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">May 2016</a>
-                      </p>
-                    </li>
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">April 2016</a>
-                      </p>
-                    </li>
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">March 2016</a>
-                      </p>
-                    </li>
-                    <li>
-                      <p class="mb-1">
-                        <a href="#!" class="dark-grey-text">Febuary 2016</a>
-                      </p>
-                    </li>
-                  </ul>
-                  <!--List-->
+	                <!--Accordion wrapper-->
+	                <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+		                {% assign posts_collate = site.posts %}
+		                {% include JB/archiveSidebar %}
+	                </div>
+	                <!--/.Accordion wrapper-->
 
                 </div>
                 <!--Grid column-->

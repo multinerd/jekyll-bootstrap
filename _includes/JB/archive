@@ -27,51 +27,61 @@ Usage:
     {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
 
     {% if forloop.first %}
-    <h2>{{ this_year }}</h2>
-    <h3>{{ this_month }}</h3>
-<ul>
-    {% endif %}
+    <!-- Accordion card -->
+<div class="card">
 
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo;
-        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-    </li>
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading{{ this_year }}">
+        <a data-toggle="collapse" href="#collapse{{ this_month }}{{ this_year }}" aria-expanded="true" aria-controls="collapse{{ this_month }}{{ this_year }}">
+            <h5 class="mb-0 dark-grey-text">
+                {{ this_year }} <i class="fa fa-angle-down rotate-icon"></i>
+            </h5>
+        </a>
+    </div>
 
-    {% if forloop.last %}
-</ul>
+    <!-- Card body -->
+    <div id="collapse{{ this_month }}{{ this_year }}" class="collapse show" role="tabpanel" aria-labelledby="heading{{ this_year }}" data-parent="#accordionEx">
+        <div class="card-body">
+            <h3>{{ this_month }}</h3>
+            <ul>
+                {% endif %}
+
+                <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo;
+                    <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+                </li>
+
+                {% if forloop.last %}
+            </ul>
+        </div>
+    </div>
+</div><!-- /Accordion card -->
 {% else %}
       {% if this_year != next_year %}
-</ul>
-<h2>{{ next_year }}</h2>
-<h3>{{ next_month }}</h3>
-<ul>
-    {% else %}
-    {% if this_month != next_month %}
-</ul>
-<h3>{{ next_month }}</h3>
-<ul>
-    {% endif %}
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-    {% assign posts_collate = nil %}
+</ul></div></div></div><!-- /Accordion card --><!-- Accordion card -->
+<div class="card">
 
-    <!-- Accordion card -->
-    <div class="card">
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading{{ next_year }}">
+        <a data-toggle="collapse" href="#collapse{{ next_month }}{{ next_year }}" aria-expanded="true" aria-controls="collapse{{ next_month }}{{ next_year }}">
+            <h5 class="mb-0 dark-grey-text">
+                {{ next_year }} <i class="fa fa-angle-down rotate-icon"></i>
+            </h5>
+        </a>
+    </div>
 
-        <!-- Card header -->
-        <div class="card-header" role="tab" id="headingOne">
-            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h5 class="mb-0">
-                    Collapsible Group Item #1 <i class="fa fa-angle-down rotate-icon"></i>
-                </h5>
-            </a>
-        </div>
-
-        <!-- Card body -->
-        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx">
-            <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-        </div>
-    </div><!-- /Accordion card -->
+    <!-- Card body -->
+    <div id="collapse{{ next_month }}{{ next_year }}" class="collapse show" role="tabpanel" aria-labelledby="heading{{ next_year }}" data-parent="#accordionEx">
+        <div class="card-body">
+            <h3>{{ next_month }}</h3>
+            <ul>
+                {% else %}
+                {% if this_month != next_month %}
+            </ul>
+            <h3>{{ next_month }}</h3>
+            <ul>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+                {% assign posts_collate = nil %}

@@ -1,0 +1,94 @@
+{% comment %}<!--
+Collate_posts helper. Collated posts by year and month.
+Usage:
+  1) assign the 'posts_collate' variable to a valid array of posts.
+  2) include JB/posts_collate
+  example:
+    {% assign posts_collate = site.posts %}
+    {% include JB/posts_collate %}
+
+  Ordering:
+    Posts are displayed in reverse chronological order.
+    For normal chronological order:
+      1) Change the for loop to this:
+        => 'for post in site.posts reversed'
+      2) Next make sure to change 'post.previous.date' to:
+        => 'post.next.date'
+
+-->{% endcomment %}
+
+{% if site.JB.posts_collate.provider == "custom" %}
+  {% include custom/posts_collate %}
+{% else %}
+  {% for post in posts_collate %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+
+    {% if forloop.first %}
+
+    <!-- Accordion card -->
+    <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading{{ this_year }}{{ this_month }}">
+            <a data-toggle="collapse" href="#collapse{{ this_year }}{{ this_month }}" aria-expanded="true" aria-controls="collapse{{ this_year }}{{ this_month }}" class="mb-0 dark-grey-text text-center">{{ this_year }} {{ this_month }}<i class="fa fa-angle-down rotate-icon"></i></a>
+        </div>
+        <!-- Card body -->
+        <div id="collapse{{ this_year }}{{ this_month }}" class="collapse show" role="tabpanel" aria-labelledby="heading{{ this_year }}{{ this_month }}" data-parent="#accordionEx">
+          <div class="card-body">
+            <ul>
+    {% endif %}
+
+                <li>
+                    <span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo;
+                    <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+                </li>
+
+    {% if forloop.last %}
+            </ul>
+        </div>
+    </div>
+    <!-- Accordion card -->
+{% else %}
+      {% if this_year != next_year %}
+            </ul>
+        </div>
+    </div>
+    <!-- Accordion card -->
+
+<!-- Accordion card -->
+<div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="heading{{ next_year }}{{ next_month }}">
+        <a data-toggle="collapse" href="#collapse{{ next_year }}{{ next_month }}" aria-expanded="true" aria-controls="collapse{{ next_year }}{{ next_month }}" class="mb-0 dark-grey-text text-center">{{ next_year }} {{ next_month }}<i class="fa fa-angle-down rotate-icon"></i></a>
+    </div>
+    <!-- Card body -->
+    <div id="collapse{{ next_year }}{{ next_month }}" class="collapse show" role="tabpanel" aria-labelledby="heading{{ next_year }}{{ next_month }}" data-parent="#accordionEx">
+        <div class="card-body">
+            <ul>
+                {% else %}
+                {% if this_month != next_month %}
+            </ul>
+        </div>
+    </div>
+    <!-- Accordion card -->
+    <!-- Accordion card -->
+    <div class="card">
+
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="heading{{ next_year }}{{ next_month }}">
+            <a data-toggle="collapse" href="#collapse{{ next_year }}{{ next_month }}" aria-expanded="true" aria-controls="collapse{{ next_year }}{{ next_month }}" class="mb-0 dark-grey-text text-center">{{ next_year }} {{ next_month }}<i class="fa fa-angle-down rotate-icon"></i></a>
+        </div>
+        <!-- Card body -->
+        <div id="collapse{{ next_year }}{{ next_month }}" class="collapse show" role="tabpanel" aria-labelledby="heading{{ next_year }}{{ next_month }}" data-parent="#accordionEx">
+            <div class="card-body">
+                <ul>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+{% assign posts_collate = nil %}
