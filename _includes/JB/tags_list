@@ -23,7 +23,7 @@ Usage:
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}
         <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag | slugify }}-ref">
-            {{ tag }} <span class="badge badge-pill pink accent-1">{{ site.tags[tag].size }}</span>
+            {{ tag }} <span class="badge badge-pill yellow">{{ site.tags[tag].size }}</span>
         </a>
     {% endfor %}
   {% else %}

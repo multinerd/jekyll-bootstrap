@@ -23,7 +23,7 @@ Usage:
     {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
             <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_categories | prepend: absolute_url }}#{{ category | slugify }}-ref">
-                {{ category | join: "/" }} <span class="badge badge-pill deep-purple">{{ site.categories[category].size }}</span>
+                {{ category | join: "/" }} <span class="badge badge-pill yellow">{{ site.categories[category].size }}</span>
             </a>
         {% endfor %}
     {% else %}
