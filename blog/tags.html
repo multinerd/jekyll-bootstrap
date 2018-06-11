@@ -10,8 +10,20 @@ permalink: /blog/tags/
 <section class="section">
 	<div class="card">
 		<div class="card-body">
-			{% assign tags_list = site.tags %} {% include JB/tags_list %}
+			{% assign tags_list = site.tags | sort %} {% include JB/tags_list %}
 		</div>
+
+		{% assign sorted_tags = site.tags | sort %}
+		{% for tag in sorted_tags %}
+		{% assign sorted_posts = tag[1] | reversed %}
+		<h2 id="{{tag[0] | uri_escape | downcase }}-ref">{{tag[0] | capitalize}}</H2>
+		<ul>
+			{% for post in sorted_posts %}
+			<li><a href="{{ site.url }}{{ site.baseurl }}{{  post.url }}">{{  post.title }}</a></li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+		<hr>
 
 		{% for tag in site.tags %}
 		<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
