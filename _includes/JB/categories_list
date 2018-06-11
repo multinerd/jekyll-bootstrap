@@ -22,13 +22,13 @@ Usage:
 {% else %}
     {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
-            <a class="btn btn-elegant lighten-4 chip m-1" href="{{ BASE_PATH }}{{ site.path.blog_categories }}#{{ category }}-ref">
+            <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_categories | prepend: absolute_url }}#{{ category | slugify }}-ref">
                 {{ category | join: "/" }} <span class="badge badge-pill deep-purple">{{ site.categories[category].size }}</span>
             </a>
         {% endfor %}
     {% else %}
         {% for category in categories_list %}
-            <a class="btn btn-elegant lighten-4 chip m-1" href="{{ BASE_PATH }}{{ site.path.blog_categories }}#{{ category[0] }}-ref">
+            <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_categories | prepend: absolute_url }}#{{ category[0] | slugify }}-ref">
                 {{ category[0] | join: "/" }} <span class="badge badge-pill indigo">{{ category[1].size }}</span>
             </a>
         {% endfor %}

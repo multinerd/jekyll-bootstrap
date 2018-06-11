@@ -22,13 +22,13 @@ Usage:
 {% else %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}
-        <a class="btn btn-elegant lighten-4 chip m-1" href="{{ BASE_PATH }}{{ site.path.blog_tags }}#{{ tag }}-ref">
+        <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag | slugify }}-ref">
             {{ tag }} <span class="badge badge-pill pink accent-1">{{ site.tags[tag].size }}</span>
         </a>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %}
-        <a class="btn btn-elegant lighten-4 chip m-1" href="{{ BASE_PATH }}{{ site.path.blog_tags }}#{{ tag[0] }}-ref">
+        <a class="btn btn-elegant lighten-4 chip m-1" href="{{ site.path.blog_tags | prepend: absolute_url }}#{{ tag[0] | slugify }}-ref">
             {{ tag[0] }} <span class="badge badge-pill pink ">{{ tag[1].size }}</span>
         </a>
     {% endfor %}
