@@ -19,7 +19,7 @@ permalink: /blog/tags/
 		<h2 id="{{tag[0] | uri_escape | downcase }}-ref">{{tag[0] | capitalize}}</H2>
 		<ul>
 			{% for post in sorted_posts %}
-			<li><a href="{{ site.url }}{{ site.baseurl }}{{  post.url }}">{{  post.title }}</a></li>
+			<li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
 			{% endfor %}
 		</ul>
 		{% endfor %}
